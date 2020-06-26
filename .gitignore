@@ -13,3 +13,4 @@ asioServer/x64
 packages/
 Debug/
 x64/
+.vs/
