@@ -1,0 +1,15 @@
+*.tlog
+*.log
+*.pch
+*.lastbuildstate
+*.obj
+*.idb
+*.pdb
+*.filters
+*.user
+
+asioClient/x64/
+asioServer/x64
+packages/
+Debug/
+x64/
