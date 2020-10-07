@@ -2,7 +2,6 @@
 #include "Handler.h"
 #include "ChattingServer.h"
 
-
 void Handler::Init(ChatServer * server)
 {
 	server_ = server;

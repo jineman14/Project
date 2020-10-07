@@ -14,3 +14,4 @@ packages/
 Debug/
 x64/
 .vs/
+external/

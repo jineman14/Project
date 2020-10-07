@@ -17,6 +17,7 @@ ChatServer::~ChatServer()
 
 void ChatServer::Init(const int nMaxSessionCount)
 {
+	// 빈 세션 미리 할당해두기
 	for (int i = 0; i < nMaxSessionCount; ++i)
 	{
 		Session* pSession = new Session(i, (boost::asio::io_context&)m_acceptor.get_executor().context(), this);
@@ -53,7 +54,7 @@ void ChatServer::ProcessPacket(const int nSessionID, const char*pData)
 
 SessionPtr ChatServer::GetSession(int sessionId)
 {
-	if (m_SessionList.size() <= sessionId)
+	if (static_cast<int>(m_SessionList.size()) <= sessionId)
 	{
 		return nullptr;
 	}
